@@ -8,8 +8,11 @@
 		setInterval(function(){
 			
 			if ($location.path() === '/') {
+
+        console.log('$scope.blocks[0]', $scope.blocks[0]);
+        console.log('$scope.blocks[0].number', $scope.blocks[0].number);
 				
-				let blockNumNew = $scope.blocks[0].number + 1;
+        let blockNumNew = $scope.blocks[0].number + 1;
 				
 				$rootScope.web3.eth.getBlock(blockNumNew, function(err, item){
 					if (err != null) {
@@ -26,7 +29,8 @@
 				});
 			}
 			
-		}, 60*100);
+    }, //60*100
+      15000);
 	}, 60);
 
 
