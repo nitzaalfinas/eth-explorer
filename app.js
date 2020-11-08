@@ -5,7 +5,7 @@ $.getJSON( "./config.json" , function( result ){
     angular.module('ethExplorer', ['ngRoute','ui.bootstrap', 'ethExplorer.search', 'ethExplorer.address', 'ethExplorer.tx', 'ethExplorer.main', 'ethExplorer.block'])
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
-                $locationProvider.html5Mode(true);
+                //$locationProvider.html5Mode(true);
                 $routeProvider.
                     when('/', {
                         templateUrl: 'views/main.html',
